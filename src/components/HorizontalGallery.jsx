@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
-import './HorizontalGallery.css'
+import '../css/HorizontalGallery.css'
 import mirchiImg from '../img/mirchi.webp'
 import nikitaImg from '../img/nikita-didi.webp'
 import aadiImg from '../img/aadi.jpg'
@@ -84,7 +84,7 @@ const HorizontalGallery = () => {
   }, [])
 
   return (
-    <section className="hgallery-section" ref={sectionRef}>
+    <section id="skills" className="hgallery-section" ref={sectionRef}>
       <div className="hg-ambient">
         <div className="hg-orb hg-orb1" />
         <div className="hg-orb hg-orb2" />

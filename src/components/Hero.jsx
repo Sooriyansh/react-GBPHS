@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import './Hero.css';
+import '../css/Hero.css';
 import sideImg from '../img/school/side.jpg';
 import schoolImg from '../img/school/school1.jpg';
 import gateImg from '../img/school/gate.jpg';

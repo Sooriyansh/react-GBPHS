@@ -1,11 +1,29 @@
-// src/components/ContactUs/ContactUs.jsx
-import React, { useEffect, useRef, useState } from 'react'
-import './ContactUs.css'
+﻿import React, { useEffect, useRef, useState } from 'react'
+import '../css/ContactUs.css'
+import {
+  FaArrowRight,
+  FaArrowUpRightFromSquare,
+  FaCircleCheck,
+  FaClock,
+  FaDiamond,
+  FaEnvelope,
+  FaFacebookF,
+  FaInstagram,
+  FaLocationDot,
+  FaMap,
+  FaMapLocationDot,
+  FaPaperPlane,
+  FaPenToSquare,
+  FaPhone,
+  FaUser,
+  FaWhatsapp,
+  FaYoutube
+} from 'react-icons/fa6'
 
 const contactData = [
   {
     id: 1,
-    icon: '📧',
+    icon: <FaEnvelope />,
     label: 'ईमेल',
     labelEn: 'Email',
     value: 'gyanbhoomischool@gmail.com',
@@ -14,7 +32,7 @@ const contactData = [
   },
   {
     id: 2,
-    icon: '📞',
+    icon: <FaPhone />,
     label: 'फ़ोन',
     labelEn: 'Phone',
     value: '+91 98273 80701',
@@ -23,7 +41,7 @@ const contactData = [
   },
   {
     id: 3,
-    icon: '📍',
+    icon: <FaLocationDot />,
     label: 'पता',
     labelEn: 'Address',
     value: 'ज्ञानभूमि पब्लिक स्कूल, डोभी',
@@ -32,7 +50,7 @@ const contactData = [
   },
   {
     id: 4,
-    icon: '⏰',
+    icon: <FaClock />,
     label: 'समय',
     labelEn: 'Timing',
     value: 'सोम - शनि : 10:00 AM - 3:00 PM',
@@ -45,7 +63,7 @@ const socialLinks = [
   {
     id: 'facebook',
     label: 'Facebook',
-    icon: 'f',
+    icon: <FaFacebookF />,
     href: 'https://www.facebook.com/',
     color: '#1877f2',
     bg: 'rgba(24, 119, 242, 0.15)'
@@ -53,7 +71,7 @@ const socialLinks = [
   {
     id: 'instagram',
     label: 'Instagram',
-    icon: 'IG',
+    icon: <FaInstagram />,
     href: 'https://www.instagram.com/',
     color: '#e4405f',
     bg: 'rgba(228, 64, 95, 0.15)'
@@ -61,7 +79,7 @@ const socialLinks = [
   {
     id: 'youtube',
     label: 'YouTube',
-    icon: '▶',
+    icon: <FaYoutube />,
     href: 'https://www.youtube.com/',
     color: '#ff0000',
     bg: 'rgba(255, 0, 0, 0.15)'
@@ -69,7 +87,7 @@ const socialLinks = [
   {
     id: 'whatsapp',
     label: 'WhatsApp',
-    icon: 'WA',
+    icon: <FaWhatsapp />,
     href: 'https://wa.me/919827380701',
     color: '#25d366',
     bg: 'rgba(37, 211, 102, 0.15)'
@@ -111,7 +129,6 @@ const ContactUs = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    // WhatsApp redirect with message
     const msg = `नाम: ${formData.name}%0Aफ़ोन: ${formData.phone}%0Aसंदेश: ${formData.message}`
     window.open(
       `https://wa.me/919827380701?text=${msg}`,
@@ -128,14 +145,12 @@ const ContactUs = () => {
       ref={sectionRef}
       id="contact"
     >
-      {/* ── Ambient Background ── */}
       <div className="ct-ambient">
         <div className="ct-orb ct-orb1" />
         <div className="ct-orb ct-orb2" />
         <div className="ct-grid" />
       </div>
 
-      {/* ── Section Header ── */}
       <div className="ct-header">
         <span className="ct-badge">✦ संपर्क करें ✦</span>
         <h2 className="ct-title">
@@ -144,7 +159,7 @@ const ContactUs = () => {
         </h2>
         <div className="ct-title-rule">
           <span className="ct-rule-line" />
-          <span className="ct-rule-icon">📬</span>
+          <span className="ct-rule-icon"><FaEnvelope /></span>
           <span className="ct-rule-line" />
         </div>
         <p className="ct-subtitle">
@@ -152,11 +167,8 @@ const ContactUs = () => {
         </p>
       </div>
 
-      {/* ── Main Content ── */}
       <div className="ct-content">
-        {/* ── Left: Info + Form ── */}
         <div className="ct-left">
-          {/* Contact Info Cards */}
           <div className="ct-info-grid">
             {contactData.map((item, index) => (
               <a
@@ -170,7 +182,6 @@ const ContactUs = () => {
                 target={item.link?.startsWith('http') ? '_blank' : '_self'}
                 rel="noopener noreferrer"
               >
-                {/* Corner decorations */}
                 <i className="ct-c ct-c-tl" />
                 <i className="ct-c ct-c-br" />
 
@@ -182,15 +193,14 @@ const ContactUs = () => {
                   </span>
                   <span className="ct-info-value">{item.value}</span>
                 </div>
-                {item.link && <span className="ct-info-arrow">→</span>}
+                {item.link && <span className="ct-info-arrow"><FaArrowRight /></span>}
               </a>
             ))}
           </div>
 
-          {/* ── Contact Form ── */}
           <form className="ct-form" onSubmit={handleSubmit}>
             <h3 className="ct-form-title">
-              <span>💬</span> संदेश भेजें
+              <span><FaPaperPlane /></span> संदेश भेजें
               <small>(Send Message)</small>
             </h3>
 
@@ -199,7 +209,7 @@ const ContactUs = () => {
                 नाम <small>(Name)</small>
               </label>
               <div className="ct-input-wrap">
-                <span className="ct-input-icon">👤</span>
+                <span className="ct-input-icon"><FaUser /></span>
                 <input
                   type="text"
                   name="name"
@@ -217,7 +227,7 @@ const ContactUs = () => {
                 फ़ोन <small>(Phone)</small>
               </label>
               <div className="ct-input-wrap">
-                <span className="ct-input-icon">📱</span>
+                <span className="ct-input-icon"><FaPhone /></span>
                 <input
                   type="tel"
                   name="phone"
@@ -235,7 +245,7 @@ const ContactUs = () => {
                 संदेश <small>(Message)</small>
               </label>
               <div className="ct-input-wrap ct-textarea-wrap">
-                <span className="ct-input-icon">✏️</span>
+                <span className="ct-input-icon"><FaPenToSquare /></span>
                 <textarea
                   name="message"
                   value={formData.message}
@@ -254,14 +264,14 @@ const ContactUs = () => {
             >
               {formSent ? (
                 <>
-                  <span>✅</span>
+                  <span><FaCircleCheck /></span>
                   <span>भेज दिया गया!</span>
                 </>
               ) : (
                 <>
-                  <span>📤</span>
+                  <span><FaPaperPlane /></span>
                   <span>WhatsApp पर भेजें</span>
-                  <span className="ct-btn-arrow">→</span>
+                  <span className="ct-btn-arrow"><FaArrowRight /></span>
                 </>
               )}
             </button>
@@ -291,25 +301,21 @@ const ContactUs = () => {
           </div>
         </div>
 
-        {/* ── Right: Map ── */}
         <div className="ct-right">
           <div className="ct-map-container">
-            {/* Map Header */}
             <div className="ct-map-header">
-              <span className="ct-map-pin">📍</span>
+              <span className="ct-map-pin"><FaLocationDot /></span>
               <div>
                 <h4 className="ct-map-title">हमारा स्थान</h4>
                 <p className="ct-map-subtitle">Our Location</p>
               </div>
             </div>
 
-            {/* Map Frame */}
             <div className="ct-map-frame">
-              {/* Loading skeleton */}
               {!mapLoaded && (
                 <div className="ct-map-skeleton">
                   <div className="ct-skeleton-pulse" />
-                  <span>🗺️ नक्शा लोड हो रहा है...</span>
+                  <span><FaMap /> नक्शा लोड हो रहा है...</span>
                 </div>
               )}
 
@@ -323,32 +329,29 @@ const ContactUs = () => {
                 onLoad={() => setMapLoaded(true)}
               />
 
-              {/* Corner Decorations */}
               <i className="ct-mc ct-mc-tl" />
               <i className="ct-mc ct-mc-tr" />
               <i className="ct-mc ct-mc-bl" />
               <i className="ct-mc ct-mc-br" />
             </div>
 
-            {/* Direction Button */}
             <a
               href="https://maps.google.com/?q=Gyanbhumi+Public+School+Dobhi"
               target="_blank"
               rel="noopener noreferrer"
               className="ct-direction-btn"
             >
-              <span>🧭</span>
+              <span><FaMapLocationDot /></span>
               <span>दिशा-निर्देश प्राप्त करें</span>
-              <span className="ct-dir-arrow">↗</span>
+              <span className="ct-dir-arrow"><FaArrowUpRightFromSquare /></span>
             </a>
           </div>
         </div>
       </div>
 
-      {/* ── Bottom Decoration ── */}
       <div className="ct-bottom-decor">
         <span className="ct-dec-line" />
-        <span className="ct-dec-diamond">◆</span>
+        <span className="ct-dec-diamond"><FaDiamond /></span>
         <span className="ct-dec-line" />
       </div>
     </section>

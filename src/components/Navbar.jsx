@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import './Navbar.css';
+import '../css/Navbar.css';
 
 const links = ['Home', 'Skills', 'Projects', 'Contact'];
 
@@ -19,7 +19,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
+    <nav className={`navbar ${scrolled ? 'scrolled' : ''}`} aria-label="Primary navigation">
       <div className="nav-logo">
         Gyan <em>Bhoomi</em>
       </div>

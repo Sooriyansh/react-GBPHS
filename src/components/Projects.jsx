@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import './Projects.css';
+import '../css/Projects.css';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -233,6 +233,7 @@ export default function Projects() {
 
   return (
     <section id="projects" className="projects-parallax">
+      <h2 className="sr-only">School Highlights and Facilities</h2>
       <div className="projects-side-progress">
         {PROJECTS.map((p, i) => (
           <button
