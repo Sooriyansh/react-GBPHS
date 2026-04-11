@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/static/css/main.88861a96.css",
+    "main.js": "/static/js/main.5be14ed4.js",
+    "static/media/dpi.jpg": "/static/media/dpi.f4f26163980efd9dfef4.jpg",
+    "static/media/nikita-didi.webp": "/static/media/nikita-didi.766654ac4d5d41b9a2ae.webp",
+    "static/media/side.jpg": "/static/media/side.5648ab3c3930189ac198.jpg",
+    "static/media/aadi.jpg": "/static/media/aadi.c60d6dd1565cdf6418fa.jpg",
+    "static/media/khusbhi-kori.jpg": "/static/media/khusbhi-kori.52a9456e3b2eb3a7ecd1.jpg",
+    "static/media/mirchi.webp": "/static/media/mirchi.83444914835004157481.webp",
+    "static/media/gate.jpg": "/static/media/gate.cb5232e79796e7ef4c43.jpg",
+    "static/media/toilate.jpg": "/static/media/toilate.dd8efd5b180dcb120eac.jpg",
+    "static/media/angali.jpg": "/static/media/angali.c306dc986a2d669d0239.jpg",
+    "static/media/anishi-sahu.jpg": "/static/media/anishi-sahu.7c1a5a62eaef834e5e8a.jpg",
+    "static/media/razz.jpg": "/static/media/razz.2b429d7f3f740db97273.jpg",
+    "static/media/rahul-kori.jpg": "/static/media/rahul-kori.b5082fd7ca6d707e1cea.jpg",
+    "static/media/kutti.jpg": "/static/media/kutti.3d505d4e94a9a698587f.jpg",
+    "static/media/didi.jpg": "/static/media/didi.df9a4d2ec303889ea67f.jpg",
+    "static/media/school1.jpg": "/static/media/school1.5db3e7bde86ec2744842.jpg",
+    "index.html": "/index.html",
+    "main.88861a96.css.map": "/static/css/main.88861a96.css.map",
+    "main.5be14ed4.js.map": "/static/js/main.5be14ed4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.88861a96.css",
+    "static/js/main.5be14ed4.js"
+  ]
+}
